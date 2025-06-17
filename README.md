@@ -14,4 +14,4 @@ Subjects and Topics:
 - DevOps
 - Python Programming
 - Web UI and Content Management
-- Object Oriented Analysis an Design
+- Object Oriented Analysis and Design
