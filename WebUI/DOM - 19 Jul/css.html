@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM newalign Demo</title>
+    <!-- jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        .redborder {
+            border: 5px solid red;
+            padding: 25px;
+            margin: 15px;
+            height: 100px;
+            width: 400px;
+        }
+        .greenborder {
+            border: 5px solid green;
+            padding: 25px;
+            margin: 15px;
+            height: 100px;
+            width: 400px;
+        }
+    </style>
+    <script>
+        $(document).ready(function() {
+            $("#b1").click(function() {
+                $("#d1").addClass("redborder");
+            });
+            
+            $("#b2").click(function() {
+                $("#d2").addClass("greenborder");
+            });
+            
+            $("#b3").click(function() {
+                $("#d2").removeClass("greenborder");
+            });
+            
+            $("#b4").click(function() {
+                $("*").toggleClass("redborder");
+                
+            });
+        });
+    </script>
+</head>
+<body>
+    <div id="d1" class="redborder">
+        This is div1 <strong>Cool</strong>. <p>This is some stuff</p>
+    </div>
+    
+    <div id="d2">
+        This is div2 <strong>Hello, how are you?</strong>. 
+        <p>This is a paragraph</p>
+    </div>
+    
+    <br>
+    
+    <button id="b1">Add class red</button>&nbsp;&nbsp;
+    <button id="b2">Add class green</button>&nbsp;&nbsp;
+    <button id="b3">Remove class green</button>&nbsp;&nbsp;
+    <button id="b4">Toggle classes</button>
+</body>
+</html>

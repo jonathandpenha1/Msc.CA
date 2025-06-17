@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>AJAX Demo</title>
+</head>
+
+<body>
+
+    <div id="main" align="center" style="border:5px green dashed; width:50%; margin-left:25%">
+        <h1 align="center">Update the list of states based on country selection</h1>
+        <form onsubmit="updatePage(); return false;"> Please select a country:
+            <select id="country" onChange="send_with_ajax(this.value+'.html');">
+                <option value="">Select</option>
+                <option value="in">India</option>
+                <option value="jp">Japan</option>
+                <option value="ch">China</option>
+            </select>
+            <br> <br>
+				The states will be updated when you select a country.
+				<br>
+				Select a state.
+				<select id="state">
+                <option value="">Select</option>
+            </select>
+            <br> <br>
+        </form>
+        <br>
+        
+    </div>
+
+    <script language="JavaScript" type="text/javascript">
+        function alertContents(httpRequest) {
+            
+            if (httpRequest.readyState==4) {
+                if (httpRequest.readyState == 4) {
+					if((httpRequest.status==200 || httpRequest.status==0)){
+					old_html=document.getElementById("state").innerHTML=old_html+htt
+                }
+                
+                else{
+					document.getELementById("information").innerHTML="<h1>Some error occurred.</h1>";
+				}
+            }
+        }
+        
+        function send_with_ajax(the_url){
+			if(the_url!="Select.html){
+			var httpRequest = new XMLHttpRequest();
+            httpRequest.onreadystatechange = function () {alertContents(httpRequest);};
+			httpRequest.open("GET", the_url, true);
+            httpRequest.send(null);	
+		}
+	}
+    </script>
+
+</body>
+
+</html>
+

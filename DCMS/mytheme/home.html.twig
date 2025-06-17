@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <link rel="shortcut icon" href="static/img/cropped-favicon-192x192.png" />
+        <title>Busy-Bees</title>
+        <link rel='stylesheet' href='static/revslider/css/settings.css' type='text/css' media='all'>
+    
+        <link rel='stylesheet' href='static/css/font-awesome.css' type='text/css' media='all' />
+        <!--link rel='stylesheet' href='static/css/jquery.fancybox.css' type='text/css' media='all' /-->
+        <link rel='stylesheet' href='static/css/select2.css' type='text/css' media='all' />
+        <link rel='stylesheet' href='static/css/animate.css' type='text/css' media='all' />
+        <link rel='stylesheet' href='static/css/main.css' type='text/css' media='all' />
+        <!--link rel='stylesheet' href='static/css/shop.css' type='text/css' media='all' /-->
+        <link rel='stylesheet' href='static/tuner/style.css' type='text/css' media='all' />
+        <script type='text/javascript' src='static/js/jquery.js'></script>
+        <script type='text/javascript' src='static/js/jquery-migrate.min.js'></script>
+        <script type='text/javascript' src='static/revslider/js/jquery.themepunch.tools.min.js'></script>
+        <script type='text/javascript' src='static/revslider/js/jquery.themepunch.revolution.min.js'></script>
+        <script type="text/javascript" src="static/revslider/js/extensions/revolution.extension.slideanims.min.js"></script>
+        <script type="text/javascript" src="static/revslider/js/extensions/revolution.extension.layeranimation.min.js"></script>
+        <script type="text/javascript" src="static/revslider/js/extensions/revolution.extension.navigation.min.js"></script>
+        <script type="text/javascript" src="static/revslider/js/extensions/revolution.extension.parallax.min.js"></script>    
+        <link rel="icon" href="static/img/cropped-favicon-32x32.png" sizes="32x32" />
+        <link rel="icon" href="static/img/cropped-favicon-192x192.png" sizes="192x192" />
+        <link rel="apple-touch-icon-precomposed" href="static/img/cropped-favicon-180x180.png">
+        <meta name="msapplication-TileImage" content="static/img/cropped-favicon-270x270.png">
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link
+          rel="stylesheet"
+          href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+          crossorigin="anonymous"
+        />
+        <link
+          rel="stylesheet"
+          href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+          crossorigin="anonymous"
+        />
+        
+    
+        <title>{% block title %}Home{% endblock %}</title>
+        <style>.user-avatar-md {
+          height: 32px;
+          width: 32px;
+          
+      }</style>
+            
+<style>
+    .carousel-caption {
+    position: absolute;
+    right: auto;
+    bottom: 200px;
+    left: 111px;
+    z-index: 10;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: white;
+    text-align: -webkit-left;
+    font-size: 40px;
+    line-height: 40px;
+    font-weight: 100;
+    font-style: normal;
+    font-family: Patrick Hand;
+    background-color: transparent;
+    border-color: rgba(0, 0, 0, 1.00);
+    border-style: none;
+    border-width: 0px;
+    border-radius: 0px 0px 0px 0px;
+    
+    text-shadow: rgb(0 0 0 / 30%) 0px
+
+    
+    }
+    .carousel-indicators li {
+    box-sizing: content-box;
+    -ms-flex: 0 1 auto;
+    flex: 0 1 auto;
+    width: 30px;
+    height: 3px;
+    margin-right: 3px;
+    margin-left: 3px;
+    text-indent: -999px;
+    cursor: pointer;
+    border-top: transparent;
+    border-bottom: 3px solid transparent;
+    opacity: 20;
+    transition: opacity .6s ease;
+}
+    
+    </style>
+</head>
+
+<body class="home page wide wave-style">
+        <div class="site_top_panel slider">
+          <!-- top canvas -->
+          <div class="top_half_sin_wrapper">
+              <canvas class="top_half_sin" data-bg-color="#ffffff" data-line-color="#ffffff"></canvas>
+          </div>
+          <!-- / top canvas -->
+          <!-- top panel  -->
+          <div class="container">
+              <div class="row_text_search">
+                  <div id="top_panel_text"><a href="tel:9004459094"><i class="fa fa-phone-square"></i> 9004459094 </a>;
+                      <a href="mailto:sherlyn.s.pereira@gmail.com"> <i class="fa fa-envelope-o"></i>sherlyn.s.pereira@gmail.com</a>
+                  </div>
+              </div>
+            
+              <div class="site_top_panel_toggle"></div>
+          </div>
+          <!-- / top panel  -->
+         </div>
+    
+        <nav class="navbar navbar-expand-lg navbar-light bg-#3498DB " style="background-color: #3498DB ;" >
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbar" 
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbar">
+            <div class="navbar-nav">
+              
+              <a class="navbar-brand" href="/"><img src="static/pic/2015/logo2.png"style="max-width:100px"class="img-responsive" title="Go to Homepage"></a>
+              <a class="nav-item nav-link" id="home" href="/welcome" style="color:white;">Dashboard</a>
+              <a class="nav-item nav-link" id="logout" href="/logout" style="color:white;text-align: right;">Logout</a>
+              <a class="nav-item nav-link" id="galery" href="/gallery" style="color:white;text-align: right;">Gallery</a>
+              <a class="nav-item nav-link" id="testimonials" href="/testimonials" style="color:white;text-align: right;">Testimonials</a>
+              <a class="nav-item nav-link" id="about-us" href="/page-about-us" style="color:white;text-align: right;">About-Us</a>
+              <a class="nav-item nav-link" id="contact-us" href="/logout" style="color:white;text-align: right;">Contact-us</a>
+              <a class="navbar-brand" href="/"><img src="static/pic/2015/logo2.png"style="max-width:100px"class="img-responsive" title="Go to Homepage"></a>
+              <a class="nav-item nav-link" id="login" href="/login" style="color:white; text-align: right;" >Login</a>
+              <a class="nav-item nav-link" id="signUp" href="/sign-up" style="color:white; text-align: right;">Sign Up</a>
+              <a class="nav-item nav-link" id="galery" href="/gallery" style="color:white;text-align: right;">Gallery</a>
+              <a class="nav-item nav-link" id="testimonials" href="/testimonials" style="color:white;text-align: right;">Testimonials</a>
+              <a class="nav-item nav-link" id="about-us" href="/page-about-us" style="color:white;text-align: right;">About-Us</a>
+              <a class="nav-item nav-link" id="contact-us" href="/logout" style="color:white;text-align: right;">Contact-us</a>
+              <a class="nav-link nav-user-img" href="#" id="navbarDropdownMenuLink2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="https://img.icons8.com/dusk/100/000000/user-female-circle.png" alt="" class="user-avatar-md rounded-circle" >
+              </a>
+              
+            </div>
+          </div>
+        </nav>
+          <div class="alert alert-danger alter-dismissable fade show" role="alert">
+            <button type="button" class="close" data-dismiss="alert">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="alert alert-success alter-dismissable fade show" role="alert">
+            <button type="button" class="close" data-dismiss="alert">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+    
+        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+              <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+              <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+              <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img class="d-block w-100" style= "height: 600px" src="static/pic/2015/logo2.png" alt="First slide">
+                <div class="carousel-caption d-none d-md-block">
+                    <p style="margin-top: 106px; margin-bottom: -6rem; margin-left: 670px;">A perfect learning center</p>
+                  </div>
+              </div>
+              <div class="carousel-item">
+                <img class="d-block w-100" src="static\pic\2015\colour-box2.jpg" alt="Second slide" style="height: 600px;">
+                <div class="carousel-caption d-none d-md-block">
+                    <h1>Our goal is <br>to Provide</h1>
+                    <p style="font-size:25px">a complete nurturing environment for <br>the growth and development of the whole child</p>
+                  </div>
+              </div>
+              <div class="carousel-item">
+                <img class="d-block w-100" src="static\pic\2015\number-rods3.jpg" alt="Third slide" style="height: 600px;">
+                <div class="carousel-caption d-none d-md-block">
+                    <h1>Learning<bR> Is Fun</h1>
+                        <p style="font-size:25px">Through play, children learn <br>about themselves, their environment,<br> people and the world around them</p>
+                  </div>
+              </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev" style="height: 600px;">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+          </div>
+            <!-- END REVOLUTION SLIDER -->
+       
+    </div>
+      
+<!-- / circle -->
+<div class="benefits_area wave" >
+    
+    <div class="left-pattern pattern pattern-8" style="width: 250px;"></div>
+    <div class="container">
+        <!-- benefits -->
+        <div class="benefits_container">
+    
+            <!-- benefits item -->
+            <div class="cws-widget">
+                <div class="widget-title">
+                    <div class="widget_title_box">
+                        <div class="widget_title_icon_section"><img src="static/img/games-304vqrsdsyjt42zxc5ydxm.png"data-at2x="static/img/games-304vqrsdsyjt42zxc5ydxm@2x.png"alt /></div>
+                        <div class="widget_title_text_section">About Us</div>
+                    </div>
+                </div>
+                <div class="cws_textwidget_content">
+                    <div class="text">   </div>
+                    <div class="link"><a href="/page-about-us"class="cws_button small">More</a></div>
+                </div>
+            </div>
+            <div class="cws-widget">
+                <div class="widget-title">
+                    <div class="widget_title_box">
+                        <div class="widget_title_icon_section"><img src="static/img/games-304vqrsdsyjt42zxc5ydxm.png"data-at2x="static/img/games-304vqrsdsyjt42zxc5ydxm@2x.png"alt /></div>
+                        <div class="widget_title_text_section">Gallery</div>
+                    </div>
+                </div>
+                <div class="cws_textwidget_content">
+                    <div class="text">   </div>
+                    <div class="link"><a href="/gallery"class="cws_button small">More</a></div>
+                </div>
+            </div>
+        
+            <!-- / benefits item -->
+        
+        <!-- / benefits -->
+    </div>
+    </div>
+          
+        <!-- / canvas -->
+        <div class="benefits_area wave" style="padding: 0px 0;">
+            <div class="container">
+                <!-- benefits -->
+                <div class="benefits_container">
+            
+                    <!-- benefits item -->
+                    <div class="cws-widget">
+                        <div class="widget-title">
+                            <div class="widget_title_box">
+                                <div class="widget_title_icon_section"><img src="static/img/games-304vqrsdsyjt42zxc5ydxm.png"data-at2x="static/img/games-304vqrsdsyjt42zxc5ydxm@2x.png"alt /></div>
+                                <div class="widget_title_text_section">Contact Us</div>
+                            </div>
+                        </div>
+                        <div class="cws_textwidget_content">
+                            <div class="text">   </div>
+                            <div class="link"><a href="/contact"class="cws_button small">More</a></div>
+                        </div>
+                    </div>
+            
+                    <!-- benefits item -->
+                    <!-- / benefits item -->
+                    <div class="cws-widget">
+                        <div class="widget-title">
+                            <div class="widget_title_box">
+                                <div class="widget_title_icon_section"><img src="static/img/activities-304vqs1fhfe8b8ybbneakq.png"data-at2x="static/img/activities-304vqs1fhfe8b8ybbneakq@2x.png"alt /></div>
+                                <div class="widget_title_text_section">Testimonials</div>
+                            </div>
+                        </div>
+                        <div class="cws_textwidget_content">
+                            <div class="text">   </div>
+                            <div class="link"><a href="/testimonials"class="cws_button small">More</a></div>
+                        </div>
+                    </div>
+            
+            </div>
+            </div>
+
+<!-- / footer -->
+</div>
+                     
+        <!-- main container -->
+        <div id="main" class="site-main">
+            <div class="page_content" style="padding-bottom: 0px !important;">
+                <!-- pattern conatainer / -->
+                <main>
+                    <!-- section -->
+                    <div class='grid_row clearfix' style='padding-top: 30px;'>
+                        <div class='grid_col grid_col_8'>
+                            <!-- about us -->
+                              <!-- / section -->
+                    <!-- divider -->
+                    <div class='grid_row clearfix'>
+                        <div class='grid_col grid_col_12'>
+                            <div class='ce clearfix'>
+                                <div>
+                                    <hr>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- / divider -->
+                    <!-- heading section -->
+                    <div class='grid_row clearfix'>
+                        <div class='grid_col grid_col_12'>
+                            <div class='ce clearfix'>
+                                <div>
+                                    <h3 class="ce_title" style="text-align: center;">Our center provides <span >the following services</span></h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- / heading section -->
+                    <!-- section -->
+                    <div class='grid_row clearfix'>
+                        <div class='grid_col grid_col_4'>
+                            <div class='ce clearfix'>
+                                <div>
+                                    <div class='cws_fa_tbl'>
+                                        <div class='cws_fa_tbl_row'>
+                                            <div class='cws_fa_tbl_cell size_1x'>
+                                                <div class='cws_fa_wrapper round'><i class='cws_fa fa fa-1x fa-university'></i><span class='ring'></span></div>
+                                            </div>
+                                            <div class='cws_fa_tbl_cell'>
+                                                <h2>Learn through work</h2></div>
+                                        </div>
+                                        <div class='cws_fa_tbl_row'>
+                                            <div class='cws_fa_tbl_cell'></div>
+                                            <div class='cws_fa_tbl_cell'>
+                                                <p>Children in our classroom build a strong foundation using montessori material.</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class='ce clearfix'>
+                                <div>
+                                    <div class='cws_fa_tbl'>
+                                        <div class='cws_fa_tbl_row'>
+                                            <div class='cws_fa_tbl_cell size_1x'>
+                                                <div class='cws_fa_wrapper round'><i class='cws_fa fa fa-1x fa-book'></i><span class='ring'></span></div>
+                                            </div>
+                                            <div class='cws_fa_tbl_cell'>
+                                                <h2>Smaller Classes</h2></div>
+                                        </div>
+                                        <div class='cws_fa_tbl_row'>
+                                            <div class='cws_fa_tbl_cell'></div>
+                                            <div class='cws_fa_tbl_cell'>
+                                                <p>We believe in smaller classes to promote individual learning and maintain studennt teacher ratio.</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class='grid_col grid_col_4'>
+                            <div class='ce clearfix'>
+                                <div>
+                                    <div class='cws_fa_tbl'>
+                                        <div class='cws_fa_tbl_row'>
+                                            <div class='cws_fa_tbl_cell size_1x'>
+                                                <div class='cws_fa_wrapper round'><i class='cws_fa fa fa-1x fa-cubes'></i><span class='ring'></span></div>
+                                            </div>
+                                            <div class='cws_fa_tbl_cell'>
+                                                <h2>Learning through nature</h2></div>
+                                        </div>
+                                        <div class='cws_fa_tbl_row'>
+                                            <div class='cws_fa_tbl_cell'></div>
+                                            <div class='cws_fa_tbl_cell'>
+                                                <p>We bring nature into the classroom to help the child explore and discover the world through nature.</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class='ce clearfix'>
+                                <div>
+                                    <div class='cws_fa_tbl'>
+                                        <div class='cws_fa_tbl_row'>
+                                            <div class='cws_fa_tbl_cell size_1x'>
+                                                <div class='cws_fa_wrapper round'><i class='cws_fa fa fa-1x fa-child'></i><span class='ring'></span></div>
+                                            </div>
+                                            <div class='cws_fa_tbl_cell'>
+                                                <h2>Mixed Age Classroom</h2></div>
+                                        </div>
+                                        <div class='cws_fa_tbl_row'>
+                                            <div class='cws_fa_tbl_cell'></div>
+                                            <div class='cws_fa_tbl_cell'>
+                                                <p>Multi-age grouping allows the child to develop according to his/her own timeline, not tied to age level expectations.</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class='grid_col grid_col_4'>
+                            <div class='ce clearfix'>
+                                <div>
+                                    <div class='cws_fa_tbl'>
+                                        <div class='cws_fa_tbl_row'>
+                                            <div class='cws_fa_tbl_cell size_1x'>
+                                                <div class='cws_fa_wrapper round'><i class='cws_fa fa fa-1x fa-heart'></i><span class='ring'></span></div>
+                                            </div>
+                                            <div class='cws_fa_tbl_cell'>
+                                                <h2>Love and Care</h2></div>
+                                        </div>
+                                        <div class='cws_fa_tbl_row'>
+                                            <div class='cws_fa_tbl_cell'></div>
+                                            <div class='cws_fa_tbl_cell'>
+                                                <p>We nuture the child's curiosity, creativity, self-esteem and independence.</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class='ce clearfix'>
+                                <div>
+                                    <div class='cws_fa_tbl'>
+                                        <div class='cws_fa_tbl_row'>
+                                            <div class='cws_fa_tbl_cell size_1x'>
+                                                <div class='cws_fa_wrapper round'><i class='cws_fa fa fa-1x fa-users'></i><span class='ring'></span></div>
+                                            </div>
+                                            <div class='cws_fa_tbl_cell'>
+                                                <h2>Inclusive Classroom</h2></div>
+                                        </div>
+                                        <div class='cws_fa_tbl_row'>
+                                            <div class='cws_fa_tbl_cell'></div>
+                                            <div class='cws_fa_tbl_cell'>
+                                                <p>Our classroom give special education students the support they need.</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                         <!-- / section -->
+                    <!-- divider -->
+                                        <!-- contact us -->
+                                        <div class='grid_row clearfix' style='padding-top: 50px;padding-bottom: 80px;'>
+                        <div class='grid_col grid_col_12'>
+                            <div class='ce clearfix'>
+                                <div class='cws_callout'>
+                                    <div class='content_section'>
+                                        <div class='callout_title'>
+                                            <div class="bees bees-end"><span></span></div>Apply For Admission</div>
+                                        <div class='separate'></div>
+                                        <div class='callout_text'>
+                                            <p style="text-align: center;">contact us at <a href="tel:9004459094"> 9004459094</a> for any details. 
+                                                <br /> Our office hours are Mon-Fri, 8am-5pm.</p>
+                                        </div>
+                                    </div>
+                                    <div class='button_section'><a href='/contact' class='cws_button xlarge'>Request Now<div class='button-shadow'></div></a></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- / contact us -->
+
+                </main>
+                <!-- pettaren container / -->
+                
+<!-- SnapWidget -->
+<iframe src="https://snapwidget.com/embed/1022299" class="snapwidget-widget" allowtransparency="true" frameborder="0" scrolling="no" style="border:none; overflow:hidden;  width:2000px; height:250px"></iframe>                <!-- footer image container / -->
+               
+       
+     </div>
+        </div>
+
+        <div class="right-pattern pattern pattern-8" style="width: 221px; z-index: -10;"></div>
+
+    </div>
+
+</body>
+
+
+</html>

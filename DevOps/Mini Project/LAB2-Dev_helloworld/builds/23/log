@@ -1,0 +1,33 @@
+Started by GitHub push by jonathandpenha1
+Running as SYSTEM
+Building in workspace C:\Users\dpenh\.jenkins\workspace\Dev_helloworld
+The recommended git tool is: NONE
+using credential 2
+ > git.exe rev-parse --resolve-git-dir C:\Users\dpenh\.jenkins\workspace\Dev_helloworld\.git # timeout=10
+Fetching changes from the remote Git repository
+ > git.exe config remote.origin.url https://github.com/jonathandpenha1/helloworld.git # timeout=10
+Fetching upstream changes from https://github.com/jonathandpenha1/helloworld.git
+ > git.exe --version # timeout=10
+ > git --version # 'git version 2.39.1.windows.1'
+using GIT_ASKPASS to set credentials Hello World 
+ > git.exe fetch --tags --force --progress -- https://github.com/jonathandpenha1/helloworld.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git.exe rev-parse "refs/remotes/origin/main^{commit}" # timeout=10
+Checking out Revision a8001d7719db5bf97206944445bc7f6d2e77ef19 (refs/remotes/origin/main)
+ > git.exe config core.sparsecheckout # timeout=10
+ > git.exe checkout -f a8001d7719db5bf97206944445bc7f6d2e77ef19 # timeout=10
+Commit message: "Update helloworld.java"
+ > git.exe rev-list --no-walk 5e6125b2fd68cd5553f59a3eedbd5e49d6c78242 # timeout=10
+No emails were triggered.
+[Dev_helloworld] $ C:\Windows\system32\cmd.exe -xe C:\Users\dpenh\AppData\Local\Temp\jenkins5773883671493654517.sh
+Microsoft Windows [Version 10.0.19045.3930]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Users\dpenh\.jenkins\workspace\Dev_helloworld>Email was triggered for: Always
+Email was triggered for: Success
+Sending email for trigger: Always
+Sending email to: dpenhajonathan@gmail.com
+Sending email for trigger: Success
+Sending email to: dpenhajonathan@gmail.com
+[Slack Notifications] found #22 as previous completed, non-aborted build
+[Slack Notifications] will send OnSuccessNotification because build matches and user preferences allow it
+Finished: SUCCESS

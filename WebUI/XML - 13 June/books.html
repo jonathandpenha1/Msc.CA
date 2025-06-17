@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>AJAX Demo</title>
+</head>
+
+<body>
+
+    <script language="JavaScript" type="text/javascript">
+        function alertContents(httpRequest) {
+
+            if (httpRequest.readyState == 4) {
+                if (httpRequest.status == 200 || httpRequest.status == 0) {
+
+                    // Retrieve XML format
+                    var ourXMLdata = httpRequest.responseXML;
+                    var ourEntries = ourXMLdata.getElementsByTagName("BOOK");
+                    var output = '<ol>';
+
+                    for (var i = 0; i < ourEntries.length; i++) {
+                        output += '<li><b>Title: ' + ourEntries[i].getElementsByTagName('NAME')[0].firstChild.nodeValue + '</b>';
+                        output += '<ul>';
+                        output += '<li>Price: ' + ourEntries[i].getElementsByTagName('PRICE')[0].firstChild.nodeValue + '</li>';
+                        output += '<li>Pages: ' + ourEntries[i].getElementsByTagName('PAGES')[0].firstChild.nodeValue + '</li>';
+                        output += '<li>Type: ' + ourEntries[i].getElementsByTagName('TYPE')[0].firstChild.nodeValue + '</li>';
+                        output += '</ul></li>';
+                    }
+
+                    output += '</ol>';
+                    document.getElementById("result").innerHTML = output;
+                } else {
+                    document.getElementById("information").innerHTML = "<h1>Some error occurred.</h1>";
+                }
+            }
+        }
+
+        function send_with_ajax(the_url) {
+            var httpRequest = new XMLHttpRequest();
+            httpRequest.onreadystatechange = function() { alertContents(httpRequest);};
+            httpRequest.open("GET", "book.xml", true);
+            httpRequest.send(null);
+
+        }
+    </script>
+
+    <div id="main" align="center" style="border:1px solid red; width:400px; margin:auto">
+        <h1 align="center">Display the list of Books</h1>
+        <button onclick="send_with_ajax();"><h3>Click the button to retrieve the XML</h3></button>
+
+        <br><br>
+
+        <div id="result" align="left"></div>
+        <div id="information" align="left"></div>
+    </div>
+
+</body>
+
+</html>

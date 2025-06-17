@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM val() Demo</title>
+    <!-- jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        div {
+            border: 15px solid orange;
+            border-radius: 50px;
+            padding: 15px;
+            margin: auto;
+            text-align: center; /* Centering content */
+        }
+    </style>
+    <script>
+        $(function() {
+            $("input").on("keyup", function() { 
+                var myvalue = $(this).val();
+                $("p").text(myvalue);
+            });
+            
+            $("button#txt").on("click", function() {
+                $("input").text("Happy Birthday");
+                alert("Input box cannot be updated via .text()");
+            });
+            
+            $("button#val").on("click", function() {
+                $("input").val("Happy Birthday");
+            });
+        });
+    </script>
+</head>
+<body>
+    <div>
+        <form>
+            <input type="text" value="default text">
+        </form>
+        <p></p>
+        Set value for the input box - either type in the box or use the button below:<br><br>
+        <button id="txt">Click to update via text()</button>&nbsp;&nbsp;
+        <button id="val">Click to update via val()</button>
+    </div>
+</body>
+</html>

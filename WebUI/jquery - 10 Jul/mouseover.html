@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>jQuery Mouse Demo</title>
+<!-- jQuery CDN -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<style>
+    div {
+        border: 15px solid orange;
+        border-radius: 50px;
+        padding: 15px;
+        margin: auto;
+        text-align: center; /* Added text-align for centering content */
+    }
+    h2 {
+        color: red;
+        text-align: center; /* Fixed typo: texy-align to text-align */
+        font-size: 2em;
+    }
+</style>
+<script>
+    $(document).ready(function() {
+        $("#a").on("mouseover", function() { // Corrected syntax: .on("mouseover", function() {...})
+            $(this).append("<b>APPEND</b><br>"); // Corrected syntax: $(this).append("<b>APPEND</b>");
+        });
+    });
+</script>
+</head>
+
+<body>
+    <div>
+        <div id="a">
+            <p>This is a paragraph.</p>
+            <p>This is <span>another</span> paragraph</p>
+            <p>The end.</p>
+        </div>
+    </div>
+</body>
+</html>

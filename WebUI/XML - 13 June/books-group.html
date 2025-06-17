@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>AJAX Demo</title>
+</head>
+
+<body>
+
+    <script language="JavaScript" type="text/javascript">
+        function alertContents(httpRequest, the_type) {
+            if (httpRequest.readyState == 4) {
+                if (httpRequest.status == 200 || httpRequest.status == 0) {
+                    var ourXMLdata = httpRequest.responseXML;
+                    if (ourXMLdata) {
+                        var ourEntries = ourXMLdata.getElementsByTagName("BOOK");
+                        var output = '<ol>';
+                        for (var i = 0; i < ourEntries.length; i++) {
+                            if (ourEntries[i].getAttribute("GR") == the_type) {
+                                output += '<li><b>Title: ' + ourEntries[i].getElementsByTagName('NAME')[0].textContent + '</b>';
+                                output += '<ul>';
+                                output += '<li>Price: ' + ourEntries[i].getElementsByTagName('PRICE')[0].textContent + '</li>';
+                                output += '<li>Pages: ' + ourEntries[i].getElementsByTagName('PAGES')[0].textContent + '</li>';
+                                output += '<li>Type: ' + ourEntries[i].getElementsByTagName('TYPE')[0].textContent + '</li>';
+                                output += '</ul></li>';
+                            }
+                        }
+                        output += '</ol>';
+                        document.getElementById("result").innerHTML = output;
+                    } else {
+                        document.getElementById("information").innerHTML = "<h1>Failed to parse XML data.</h1>";
+                    }
+                } else {
+                    document.getElementById("information").innerHTML = "<h1>Failed to fetch XML data. Error code: " + httpRequest.status + "</h1>";
+                }
+            }
+        }
+
+        function send_with_ajax(the_type) {
+            var httpRequest = new XMLHttpRequest();
+            httpRequest.onreadystatechange = function() { alertContents(httpRequest, the_type); };
+            httpRequest.open("GET", "book-group.xml", true);
+            httpRequest.send(null);
+        }
+    </script>
+
+    <div id="main" align="center" style="border:1px solid red; width:400px; margin:auto">
+        <h1 align="center">Display the list of Books</h1>
+        <form>
+            <select onChange="send_with_ajax(this.value);">
+                <option>Select</option>
+                <option value="SC">SCIENCE</option>
+                <option value="LT">LITERATURE</option>
+            </select>
+        </form>
+        <br><br>
+
+        <div id="information" align="left"></div>
+        <div id="result" align="left"></div>
+    </div>
+
+</body>
+
+</html>

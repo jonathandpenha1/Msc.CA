@@ -1,0 +1,58 @@
+<!--WAP to fetch a random article from wikipedia -->
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AJAX Demo</title>
+    <script type="application/javascript">
+        function loadJSON()	{
+	var json_url = "https://en.wikipedia.org/api/rest_v1/page/random/summary";
+	var http_request;
+	try {
+			http_request=new XMLHttpRequest();
+	}
+		
+		catch(e){
+			alert("Your browser broke!");
+			return false;
+	}
+
+	http_request.onreadystatechange=function()
+	{	
+		if(http_request.readyState==4){
+			
+			//Javascript function JSON.parse to parse JSON data
+			var jsonObj = JSON.parse(http_request.responseText);
+			
+			var title = jsonObj.title;
+            var summary = jsonObj.extract;
+            var image=jsonObj.thumbnail ? jsonObj.thumbnail.source : '';
+
+            // Update the HTML elements with article details
+			document.getElementById("title").textContent = title;
+            document.getElementById("summary").textContent = summary;
+            document.getElementById("image").src= image;
+		}
+		
+	}
+	http_request.open("GET", json_url, true);
+	http_request.send(); 
+}
+
+</script>
+</head>
+	<body>	
+		<div id ="update" align="center" style="border:10px blue solid; width:75%; margin:auto">
+			<h1 align="center">Article Details</h1>
+			<h2 id="title"></h2>
+				<image id="image"></image>
+				<p id="summary"></p> 
+				 
+			<br>
+			<button type="button" onclick="loadJSON()">Fetch Random Wikipedia Article Details</button>
+		<br><br>
+		</div>
+	</body>
+
+</html>

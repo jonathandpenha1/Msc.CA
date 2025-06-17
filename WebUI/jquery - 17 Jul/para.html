@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery Accordion Demo</title>
+
+    <!-- jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    
+    <style>
+        h3 {
+            border: 2px solid yellow; 
+            max-width: 50%; 
+            background: blue;
+            text-align: center;
+            color: white; /* Added for better visibility */
+        }
+    </style>
+</head>
+<body>
+    <div id="d1">
+        This is the first div.
+        <p>I am para 1</p>
+        <p>I am para 2</p>
+    </div>
+    
+    <button id="get">Get Paragraph Data</button>
+    <button id="set">Set Paragraph Data</button>
+
+    <script>
+        $(function() {
+            $("#get").on("click", function() {
+                var $paradata = $("p").text();
+                alert($paradata);
+            });
+            
+            $("#set").on("click", function() {
+                var $myDate = new Date(); // Corrected to use 'new Date()'
+                $("p").text($myDate);
+            });
+        });
+    </script>
+</body>
+</html>

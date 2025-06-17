@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery Hide Demo</title>
+
+    <!-- jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <div align="center">
+        Welcome to the registration process
+        <form>
+        <p><span>Please enter full name:</span><input type="text"></p>
+        <p><span>Please choose a good password:</span><input type="password"></p>
+        </form>
+    </div>
+
+    <script>
+        $(document).ready(function() {
+            $("input").on("focus", function() {
+                $(this).prev("span").css({"display":"inline"}.fadeTo(2000,.4);
+            });
+            
+          )};
+
+          
+    </script>
+</body>
+</html>

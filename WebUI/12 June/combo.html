@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>AJAX Demo</title>
+</head>
+
+<body>
+
+    <div id="main" align="center">
+        <h1 align="center">Example of XMLHttpRequest Object</h1>
+        <select id="fruits" onchange="updatePage()">
+            <option value="">Select a fruit</option>
+            <option value="apple">Apple</option>
+            <option value="banana">Banana</option>
+            <option value="orange">Orange</option>
+        </select>
+        <br> <br>
+
+        <div id="update" style="border:10px blue solid; width:50%;">
+            Please select a fruit.
+        </div>
+    </div>
+
+    <script>
+        function updatePage() {
+            var selectedFruit = document.getElementById("fruits").value;
+            if (selectedFruit == "") {
+                document.getElementById("update").innerHTML = "<h2>Please select a fruit.</h2>";
+                return;
+            }
+            var xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function () {
+                if (this.readyState == 4 && this.status == 200) {
+                    document.getElementById("update").innerHTML = this.responseText;
+                } else if (this.readyState == 4) {
+                    document.getElementById("update").innerHTML = "<h2>Some Error Occurred</h2>";
+                }
+            };
+            xhttp.open("GET", selectedFruit + ".html", true);
+            xhttp.send();
+        }
+    </script>
+
+</body>
+
+</html>

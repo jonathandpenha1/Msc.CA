@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery Accordion Demo</title>
+
+    <!-- jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    
+    <style>
+        .header {
+            cursor: pointer; /* Indicate that the header is clickable */
+        }
+        
+        .paragraph {
+            display: none; /* Hide answers by default */
+        }
+    </style>
+</head>
+<body>
+    <h1>jQuery Effects - An Accordion</h1>
+    <h2>FAQ Section</h2><br>  
+    
+    <div class="accordion">
+        <h3 class="header">What is an FAQ?</h3>
+        <p class="paragraph">A frequently asked questions list is often used in 
+        articles, websites, email lists, 
+        and online forums where common questions tend to recur, for example through posts or 
+        queries by new users related to common knowledge gaps.</p>
+        
+        <h3 class="header">What is jQuery?</h3>
+        <p class="paragraph">jQuery is a JavaScript library designed to simplify HTML DOM 
+        tree traversal and manipulation, as well as event handling, CSS animations, and Ajax.</p>
+    </div>
+
+    <script>
+        $(document).ready(function() {
+            $(".header").on("click", function() {
+                // Slide up all paragraphs first
+                $(".paragraph").slideUp();
+                // Then slide down the next paragraph corresponding to the clicked header
+                $(this).next(".paragraph").slideDown(400, "linear");
+            });
+        });
+    </script>
+</body>
+</html>

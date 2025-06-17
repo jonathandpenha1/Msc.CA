@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM newalign Demo</title>
+    <!-- jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        p.def{color:red;background-color:lightyellow}
+        p.a{color:blue;background-color:lightgrey}
+        p.b{color:green;background-color:orange}
+    </style>
+    <script>
+        $(document).ready(function() {
+            $("button").on("click", function() { 
+                if($(this).attr("id") == "a"){
+					var newalign = $("p").attr("align");
+					alert("Current setting for align attribute: "+newalign);
+					newalign = prompt("new align: left right justify");
+					$("p").attr("align",newalign);
+				}
+            
+				else{
+					var pclass = prompt("new class: def, a, b");
+					$("p").attr("class",pclass);
+				}
+			});
+		});
+			
+            
+    </script>
+</head>
+<body>
+    <div align="center" style="border:5px dashed black; padding:5px">
+		<p id="mypara" align="right" class="def"> Click on the button to update the 
+		paragraph. What is Lorem Ipsum? 
+		Lorem Ipsum is simply dummy text of the printing and typesetting indistry. </p>
+        
+        <button id="a">Change alignment</button>&nbsp;&nbsp;
+        <button id="b">Change background</button>
+    </div>
+</body>
+</html>

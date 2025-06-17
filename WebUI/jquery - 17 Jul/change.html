@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery Hide Demo</title>
+
+    <!-- jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <div align="center">
+        Welcome to the registration process
+        <form>
+            Update this: <input type="text" name="username" value="Hello">
+            <br>
+            <select name="State">
+                <option>Maharashtra</option>
+                <option selected="selected">Goa</option>
+                <option>Gujarat</option>
+                <option>Rajasthan</option>
+             <select>
+                
+        </form>
+    </div id="data">
+
+    <script>
+       $("input").on("change", function(){
+            var str = $(this).val();
+            $("#data").text(str);
+       });
+
+          
+    </script>
+</body>
+</html>

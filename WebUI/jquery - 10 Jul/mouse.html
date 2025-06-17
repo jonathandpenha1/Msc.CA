@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>jQuery Mouse Demo</title>
+    <!-- jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  </head>
+
+  <style>
+    div {
+      border: 15px solid orange;
+      border-radius: 50px;
+      padding: 15px;
+      margin: auto;
+    }
+    h2 {
+      color: red;
+      text-align: center;
+      font-size: 2em;
+    }
+  </style>
+
+  <script>
+      $(document).ready(function() {
+
+    $("p").mouseenter(function(){
+    	$("p").css({"background-color":"yellow", "font-weight":"bold"}); });
+
+    $("p").mouseleave(function(){
+    	$("p").css({"background-color":"#dcdcdc", "font-weight":"normal"});
+
+
+    $("p").mouseup(function(){
+    	$("p").css({"background-color":"red", "font-weight":"bold"}); });
+
+    $("p").mousedown(function(){
+    	$("p").css({"background-color":"blue", "font-weight":"normal"});
+
+    });
+
+      });
+  </script>
+
+  <body>
+    <div align="center">
+      <p>Move the mouse pointer over this paragraph.</p>
+      <p>another para</p>
+    </div>
+  </body>
+</html>

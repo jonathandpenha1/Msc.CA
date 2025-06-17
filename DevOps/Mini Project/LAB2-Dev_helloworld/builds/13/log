@@ -1,0 +1,39 @@
+Started by user [8mha:////4C4sBeRm822OpaogaiTtwCoeMk8PfqfOWkdaIdtsF5l/AAAAlh+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAyBEgYu/dLi1CL9ovz8EgC95nKtvwAAAA==[0mJonathan D'penha
+Running as SYSTEM
+Building in workspace C:\Users\dpenh\.jenkins\workspace\Dev_helloworld
+The recommended git tool is: NONE
+using credential 2
+ > git.exe rev-parse --resolve-git-dir C:\Users\dpenh\.jenkins\workspace\Dev_helloworld\.git # timeout=10
+Fetching changes from the remote Git repository
+ > git.exe config remote.origin.url https://github.com/jonathandpenha1/helloworld.git # timeout=10
+Fetching upstream changes from https://github.com/jonathandpenha1/helloworld.git
+ > git.exe --version # timeout=10
+ > git --version # 'git version 2.39.1.windows.1'
+using GIT_ASKPASS to set credentials Hello World 
+ > git.exe fetch --tags --force --progress -- https://github.com/jonathandpenha1/helloworld.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git.exe rev-parse "refs/remotes/origin/main^{commit}" # timeout=10
+Checking out Revision ca8c073004f416f884c3cb33cc25bafa85dbad43 (refs/remotes/origin/main)
+ > git.exe config core.sparsecheckout # timeout=10
+ > git.exe checkout -f ca8c073004f416f884c3cb33cc25bafa85dbad43 # timeout=10
+Commit message: "Update helloworld.java"
+ > git.exe rev-list --no-walk ca8c073004f416f884c3cb33cc25bafa85dbad43 # timeout=10
+No emails were triggered.
+[Dev_helloworld] $ cmd /c call C:\Users\dpenh\AppData\Local\Temp\jenkins4192440980436601475.bat
+
+C:\Users\dpenh\.jenkins\workspace\Dev_helloworld>javac Helloworld.java 
+
+C:\Users\dpenh\.jenkins\workspace\Dev_helloworld>java Helloworld 
+Error: Could not find or load main class Helloworld
+Caused by: java.lang.NoClassDefFoundError: Helloworld (wrong name: helloworld)
+
+C:\Users\dpenh\.jenkins\workspace\Dev_helloworld>exit 1 
+Build step 'Execute Windows batch command' marked build as failure
+Email was triggered for: Always
+Email was triggered for: Failure - Any
+Sending email for trigger: Failure - Any
+Sending email to: dpenhajonathan@gmail.com
+Sending email for trigger: Always
+Sending email to: dpenhajonathan@gmail.com
+[Slack Notifications] found #12 as previous completed, non-aborted build
+[Slack Notifications] will send OnEveryFailureNotification because build matches and user preferences allow it
+Finished: FAILURE

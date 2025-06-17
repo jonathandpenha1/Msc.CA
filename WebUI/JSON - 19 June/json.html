@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AJAX Demo</title>
+    <script type="application/javascript">
+        function loadJSON()	{
+	var json_file = "ajax-json.json";
+	var http_request;
+	try {
+			http_request=new XMLHttpRequest();
+	}
+		
+		catch(e){
+			alert("Your browser broke!");
+			return false;
+	}
+
+	http_request.onreadystatechange=function()
+	{	
+		if(http_request.readyState==4){
+			
+			//Javascript function JSON.parse to parse JSON data
+			var jsonObj = JSON.parse(http_request.responseText);
+			
+			//JSON variable now contains the data structure
+			//jsonObj.subject and json.Obj.credits contains the values 
+			document.getElementById("sub").innerHTML=jsonObj.subject;
+			document.getElementById("cr").innerHTML=jsonObj.credits;
+		}
+		
+	}
+	http_request.open("GET", json_file, true);
+	http_request.send(); 
+}
+
+</script>
+</head>
+	<body>	
+		<div id ="update" align="center" style="border:10px blue solid; width:50%; margin:auto">
+			<h1 align="center">Get Details</h1>
+			<ol style="display:inline-block; text-align:left;">
+				<li>Subject: <span id="sub">HTML</span></li>
+				<li>Credits: <span id="cr">3</span></li>
+			</ol>
+			
+		<button type="button" onclick="loadJSON()">Update Details</button>
+		<br><br>
+		</div>
+	</body>
+
+</html>

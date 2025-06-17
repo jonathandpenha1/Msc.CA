@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+	
+	<!-- Try slide down slide up and slide toggle -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery Hide Demo</title>
+
+    <!-- jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    
+    <style>
+		img{display:visible}
+	</style>
+</head>
+<body>
+    <button>Get Back</button><br>
+    <div id="clickme">Click here</div>    
+	<img id="dog" src="dog.jpg" alt="doggy" width="600"> 
+    <script>
+        $("#clickme").on("click",function() {
+            $("#dog").fadeTo(4000,0.1,"linear");
+            
+        });
+        
+       
+    </script>
+</body>
+</html>
+
+

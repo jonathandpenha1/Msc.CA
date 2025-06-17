@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>jQuery Mouse Demo</title>
+<!-- jQuery CDN -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<style>
+    div {
+        border: 15px solid orange;
+        border-radius: 50px;
+        padding: 15px;
+        margin: auto;
+        text-align: center; /* Added text-align for centering content */
+    }
+    h2 {
+        color: red;
+        text-align: center; /* Fixed typo: texy-align to text-align */
+        font-size: 2em;
+    }
+</style>
+<script>
+    $(document).ready(function() {
+        $("div#target").hover(function() { 
+            $("span").text("IN");
+        }, function() {
+            $("span").text("OUT");
+        });
+    });
+</script>
+</head>
+
+<body>
+    <div align="center">
+        <div id="target">
+            <p>Move the mouse over the div.</p>
+            <span>&nbsp;</span> <!-- Added span element with initial content -->
+        </div>
+    </div>
+</body>
+</html>

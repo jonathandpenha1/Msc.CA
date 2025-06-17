@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AJAX</title>
+    <!-- jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    
+    <script>
+        $(document).ready(function() {
+            $("button").click(function() {
+                $("#d1").load("demo.txt #frag", function(responseTxt, statusTxt, xhr){
+					if(statusTxt == "success")
+						alert("External contents loaded successfully"+responseTxt);
+					
+					if(statusTxt != "success")
+						alert("Error: "+ xhr.status + ": "+ xhr.statusText);
+					
+				}); 
+			});
+        });
+    </script>
+</head>
+<body>
+    <div id="d1"><h2>This heading will change by a fragment</h2></div>
+    <button>Get external content</button>
+</body>
+</html>

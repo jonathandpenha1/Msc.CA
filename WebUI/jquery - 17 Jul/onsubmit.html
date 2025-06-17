@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery Hide Demo</title>
+
+    <!-- jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <div>
+        <h2>Welcome to the Registration Process</h2>
+        <form action="javascript:void(0);" method="get">
+            <div>
+                <input type="text" placeholder="Enter your name"><br><br>
+                I agree to allow you to use this information<br>
+                <input type="checkbox" name="agreement" value="agree">
+                <br><br>
+                <input type="submit" value="Submit">
+            </div>
+        </form>
+        <span></span>
+    </div>
+
+    <script>
+        $("form").on("submit", function(event) {
+            if ($("input:checkbox:checked").val() === "agree") {
+                $("span").text("Validated...").show();
+                // Alert for success if needed
+                alert("Form submitted successfully!");
+            } else {
+                alert("Cannot proceed further without agreement.");
+                event.preventDefault();
+            }
+        });
+    </script>
+</body>
+</html>
+

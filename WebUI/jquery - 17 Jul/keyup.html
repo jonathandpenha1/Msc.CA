@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery Hide Demo</title>
+
+    <!-- jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <div align="center">
+        Enter something: <input type="text">
+        <p>The background will change</p>
+    </div>
+
+    <script>
+        $(document).ready(function() {
+            $("input").on("keydown", function() {
+                $("p").css({"background-color": "yellow", "border": "15px solid red"});
+            });
+
+            $("input").on("keyup", function() {
+                $("p").css({"background-color": "line", "border": "15px dashed blue"}); 
+            });
+        });
+    </script>
+</body>
+</html>
+

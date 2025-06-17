@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AJAX Demo</title>
+    <!-- jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+       
+       
+    </style>
+    <script>
+        $(document).ready(function() {
+            $("button").click(function() {
+                $("#d1").load("demo.txt #frag", function(){
+					alert("Fragment Loaded");
+					}); //only calls the content in the id="frag"
+            });
+
+        });
+    </script>
+</head>
+<body>
+    <div id="d1"><h2>This heading will change using normal jQuery AJAX</h2></div>
+    
+    
+    <button>Get external content</button>
+</body>
+</html>

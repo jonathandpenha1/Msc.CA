@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<BOOKCATALOG>
+    <BOOK ID="23" GR="SC">
+        <NAME>Learn XML</NAME>
+        <PRICE>500</PRICE>
+        <PAGES>400</PAGES>
+        <TYPE>E-Book</TYPE>
+    </BOOK>
+    <BOOK ID="38" GR="SC">
+        <NAME>Learn JavaScript</NAME>
+        <PRICE>200</PRICE>
+        <PAGES>500</PAGES>
+        <TYPE>Paper Back</TYPE>
+    </BOOK>
+    <BOOK ID="558" GR="LT">
+        <NAME>Jane Eyre</NAME>
+        <PRICE>200</PRICE>
+        <PAGES>500</PAGES>
+        <TYPE>Paper Back</TYPE>
+    </BOOK>
+</BOOKCATALOG>

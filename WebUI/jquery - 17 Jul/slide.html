@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery Hide Demo</title>
+
+    <!-- jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    
+    <style>
+		img{display:none}
+	</style>
+</head>
+<body>
+    <button>Get Back</button><br>
+    <div id="clickbone">Click here</div>    
+	<img id="dog" src="dog.jpg" alt="doggy" width="600"> 
+    <script>
+        $("#clickbone").click(function() {
+            $("#dog").hide("slow","linear");
+            
+        });
+        
+        $("button").click(function() {
+            $("#dog").show(4000,"swing");
+            
+        });
+        
+    </script>
+</body>
+</html>
+

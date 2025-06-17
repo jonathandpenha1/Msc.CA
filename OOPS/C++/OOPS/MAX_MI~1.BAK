@@ -1,0 +1,43 @@
+#include<iostream.h>
+#include<conio.h>
+
+void main()
+{
+clrscr();
+int a[3][3],i,j;
+cout<<"Enter values"<<endl;
+for(i=0;i<3;i++)
+{
+for(j=0;j<3;j++)
+{
+cin>>a[i][j];
+}
+}
+for(i=0;i<3;i++)
+{
+for(j=0;j<3;j++)
+{
+{
+cout<<a[i][j];
+}
+}
+ int min = ;
+    int max = ;
+  
+    // for finding the max element in given array
+    for(int i = 0; i<n; i++){
+        for(int j = 0; j<n; j++){
+            if(max < arr[i][j]) max = arr[i][j];
+        }
+    }
+     
+    // for finding the min element in given array
+    for(int i = 0; i<n; i++){
+        for(int j = 0; j<n; j++){
+            if(min > arr[i][j]) min = arr[i][j];
+        }
+    }
+    cout << "Maximum = " << max << ", Minimum = " << min;
+}
+getch();
+}

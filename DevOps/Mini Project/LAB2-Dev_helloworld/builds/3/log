@@ -1,0 +1,47 @@
+Started by user [8mha:////4C4sBeRm822OpaogaiTtwCoeMk8PfqfOWkdaIdtsF5l/AAAAlh+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAyBEgYu/dLi1CL9ovz8EgC95nKtvwAAAA==[0mJonathan D'penha
+Running as SYSTEM
+Building in workspace C:\Users\dpenh\.jenkins\workspace\Dev_helloworld
+The recommended git tool is: NONE
+using credential 2
+ > git.exe rev-parse --resolve-git-dir C:\Users\dpenh\.jenkins\workspace\Dev_helloworld\.git # timeout=10
+Fetching changes from the remote Git repository
+ > git.exe config remote.origin.url https://github.com/jonathandpenha1/helloworld.git # timeout=10
+Fetching upstream changes from https://github.com/jonathandpenha1/helloworld.git
+ > git.exe --version # timeout=10
+ > git --version # 'git version 2.39.1.windows.1'
+using GIT_ASKPASS to set credentials Hello World 
+ > git.exe fetch --tags --force --progress -- https://github.com/jonathandpenha1/helloworld.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git.exe rev-parse "refs/remotes/origin/main^{commit}" # timeout=10
+Checking out Revision 040d294b2db1bdd66cb4394d38aee254ec60c162 (refs/remotes/origin/main)
+ > git.exe config core.sparsecheckout # timeout=10
+ > git.exe checkout -f 040d294b2db1bdd66cb4394d38aee254ec60c162 # timeout=10
+Commit message: "Update helloworld.java"
+First time build. Skipping changelog.
+[Dev_helloworld] $ sh -xe C:\Users\dpenh\AppData\Local\Temp\jenkins8269141544850089102.sh
+The system cannot find the file specified
+FATAL: command execution failed
+java.io.IOException: CreateProcess error=2, The system cannot find the file specified
+	at java.base/java.lang.ProcessImpl.create(Native Method)
+	at java.base/java.lang.ProcessImpl.<init>(ProcessImpl.java:500)
+	at java.base/java.lang.ProcessImpl.start(ProcessImpl.java:159)
+	at java.base/java.lang.ProcessBuilder.start(ProcessBuilder.java:1126)
+Caused: java.io.IOException: Cannot run program "sh" (in directory "C:\Users\dpenh\.jenkins\workspace\Dev_helloworld"): CreateProcess error=2, The system cannot find the file specified
+	at java.base/java.lang.ProcessBuilder.start(ProcessBuilder.java:1170)
+	at java.base/java.lang.ProcessBuilder.start(ProcessBuilder.java:1089)
+	at hudson.Proc$LocalProc.<init>(Proc.java:252)
+	at hudson.Proc$LocalProc.<init>(Proc.java:221)
+	at hudson.Launcher$LocalLauncher.launch(Launcher.java:994)
+	at hudson.Launcher$ProcStarter.start(Launcher.java:506)
+	at hudson.tasks.CommandInterpreter.perform(CommandInterpreter.java:144)
+	at hudson.tasks.CommandInterpreter.perform(CommandInterpreter.java:92)
+	at hudson.tasks.BuildStepMonitor$1.perform(BuildStepMonitor.java:20)
+	at hudson.model.AbstractBuild$AbstractBuildExecution.perform(AbstractBuild.java:818)
+	at hudson.model.Build$BuildExecution.build(Build.java:199)
+	at hudson.model.Build$BuildExecution.doRun(Build.java:164)
+	at hudson.model.AbstractBuild$AbstractBuildExecution.run(AbstractBuild.java:526)
+	at hudson.model.Run.execute(Run.java:1895)
+	at hudson.model.FreeStyleBuild.run(FreeStyleBuild.java:44)
+	at hudson.model.ResourceController.execute(ResourceController.java:101)
+	at hudson.model.Executor.run(Executor.java:442)
+Build step 'Execute shell' marked build as failure
+Finished: FAILURE

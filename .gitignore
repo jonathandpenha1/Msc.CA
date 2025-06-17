@@ -1,0 +1,7 @@
+# Ignore database and large binary files
+WebUI/mysql/data/
+*.zip
+*.sqlite
+*.env
+*.pem
+
